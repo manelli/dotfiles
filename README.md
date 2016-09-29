@@ -34,8 +34,3 @@ Keyboard shorcut for starting tmux:
 ``` bash
 gnome-terminal --maximize -e 'tmux -2'
 ```
-
-To import gnome-terminal configuration:
-```bash
-gconftool-2 --load ~/dotfiles/gnome-terminal-conf.xml
-```
