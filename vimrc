@@ -47,7 +47,7 @@ set ruler                 " Show the cursor position all the time.
 set showcmd               " Display incomplete commands.
 set showmatch             " Match braces.
 set textwidth=80          " Set wrap width.
-set clipboard=unnamedplus " Use system clipboard
+set clipboard^=unnamed,unnamedplus " Use system clipboard
 
 " Indentation
 set tabstop=2
