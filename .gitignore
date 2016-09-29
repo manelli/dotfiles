@@ -1,6 +1,5 @@
 # Dotfiles #
 ############
-vim/autoload/plug.vim
 zshrc
 
 # Compiled source #
