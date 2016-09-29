@@ -3,22 +3,18 @@ dotfiles
 
 
 ## Installation
-1) Install [fzf](https://github.com/junegunn/fzf)
-
-2) Clone this repo into `~/dotfiles`
+1) Clone this repo into `~/dotfiles`
 ``` bash
 git clone --depth 1 https://github.com/manelli/dotfiles ~/dotfiles
 ```
 
-3) Create symlinks
+2) Create symlinks
 ``` bash
 cd ~/dotfiles
 ./makesymlinks.sh
 ```
 
-4) Install [vim-plug](https://github.com/junegunn/vim-plug)
-
-5) Done!
+3) Done!
 
 
 ## makesymlinks.sh
@@ -30,7 +26,7 @@ The `makesymlinks.sh` script will:
 ---
 
 ### Requirements
-- [Vim](https://github.com/vim/vim)
-- [vim-plug](https://github.com/junegunn/vim-plug)
+- [vim](https://github.com/vim/vim)
+- [vim-plug](https://github.com/junegunn/vim-plug) (vendored in `vim/autoload/plug.vim`)
 - [fzf](https://github.com/junegunn/fzf)
 - [tmux](https://github.com/tmux/tmux)
