@@ -34,9 +34,3 @@ The `makesymlinks.sh` script will:
 - [vim-plug](https://github.com/junegunn/vim-plug)
 - [fzf](https://github.com/junegunn/fzf)
 - [tmux](https://github.com/tmux/tmux)
-
-### Ubuntu specific
-Keyboard shorcut for starting tmux:
-``` bash
-gnome-terminal --maximize -e 'tmux -2'
-```
