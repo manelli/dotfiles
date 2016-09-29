@@ -4,18 +4,19 @@ alias D='cd ~/Downloads'
 alias dotfiles='cd ~/dotfiles'
 alias dev='cd ~/dev'
 
-## Colorize grep and ls output
-alias grep='grep --color=auto'
-alias ls='ls -p --color'
-
 ## tmux in 256 colors
 alias tmux='tmux -2'
 
-## rm safety net
-alias rm='rm -I'
-
-## rmf => rm -rf
-alias rmf='rm -rfI'
+platform=$(uname);
+if [[ $platform == 'Linux' ]]; then
+  alias ls='ls -p --color'
+  alias rm='rm -I'
+  alias rmf='rm -rfI'
+elif [[ $platform == 'Darwin' ]]; then
+  alias ls='ls -p -G'
+  alias rm='rm -i'
+  alias rmf='rm -rfi'
+fi
 
 ## je
 alias :q='exit'
