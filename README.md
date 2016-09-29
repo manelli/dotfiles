@@ -40,17 +40,3 @@ Keyboard shorcut for starting tmux:
 ``` bash
 gnome-terminal --maximize -e 'tmux -2'
 ```
-
-### macOS specific
-In `bash_aliases` change:
-``` diff
--alias ls='ls -p --color'
-+alias ls='ls -p -G'
- 
--alias rm='rm -I'
-+alias rm='rm -i'
- 
--alias rmf='rm -rfI'
-+alias rmf='rm -rfi'
-```
-
