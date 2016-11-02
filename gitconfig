@@ -15,6 +15,12 @@
     ui = auto
 [github]
     user = manelli
+[gitlab]
+    user = manelli
+[url "git@github.com:"]
+    insteadOf = "gh:"
+[url "git@gitlab.com:"]
+    insteadOf = "gl:"
 [alias]
     st = status -s
     ci = commit
