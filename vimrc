@@ -2,7 +2,7 @@ set nocompatible " SET FIRST
 set re=1
 
 " Requirements {{{
-" vim-gnome
+" vim with clipboard enabled
 " }}}
 
 " Leader {{{
