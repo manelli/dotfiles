@@ -2,7 +2,9 @@
 alias E='cd ~/Desktop'
 alias D='cd ~/Downloads'
 alias dotfiles='cd ~/dotfiles'
+alias work='cd ~/work'
 alias dev='cd ~/dev'
+alias bin='cd ~/bin'
 
 ## tmux in 256 colors
 alias tmux='tmux -2'
