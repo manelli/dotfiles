@@ -13,7 +13,7 @@ dir=~/dotfiles
 olddir=~/old_dotfiles
 
 # list of files/folders to symlink in ~/
-files="bash_aliases bashrc gemrc gitconfig inputrc irbrc pryrc tmux.conf vim vimrc"
+files="bash_aliases bashrc gemrc gitconfig inputrc irbrc pryrc tmux.conf vim vimrc gitmessage"
 
 ##########
 

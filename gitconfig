@@ -17,6 +17,8 @@
     user = manelli
 [gitlab]
     user = manelli
+[commit]
+    template = ~/.gitmessage
 [url "git@github.com:"]
     insteadOf = "gh:"
 [url "git@gitlab.com:"]
