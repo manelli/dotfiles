@@ -25,6 +25,12 @@ The `makesymlinks.sh` script will:
 
 ---
 
+## Custom binaries
+Custom binaries go in [~/bin](https://github.com/manelli/bin)
+
+## Custom aliases
+Custom aliases go in `~/.bash_profile`
+
 ### Requirements
 - [vim](https://github.com/vim/vim) (with clipboard enabled)
 - [vim-plug](https://github.com/junegunn/vim-plug) (vendored in `vim/autoload/plug.vim`)
