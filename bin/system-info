@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+platform=$(uname);
+if [[ $platform == 'Linux' ]]; then
+  os=$(uname -o)
+  kernel=$(uname -sr)
+  distro=$(lsb_release -ds)
+  arch=$(uname -i)
+  user=$(whoami)
+  host=$(uname -n)
+  tram=$(awk '/MemTotal/ {print $2}' /proc/meminfo | awk '{$1=$1/(1024^2); print $1,"GB";}')
+  aram=$(awk '/MemAvailable/ {print $2}' /proc/meminfo | awk '{$1=$1/(1024^2); print $1,"GB";}')
+  cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/^ //')
+  res=$(xrandr | grep '*' | gawk '{printf "%s ", $1}')
+elif [[ $platform == 'Darwin' ]]; then
+  echo "Not implemented for mac"
+  exit 1
+else
+  echo "Unable to fetch system information"
+  exit 1
+fi
+
+printf "OS:\t %s\n" "$os";
+printf "Kernel:\t %s\n" "$kernel";
+printf "Distro:\t %s\n" "$distro"
+printf "Arch:\t %s\n" "$arch"
+printf "User:\t %s\n" "$user"
+printf "Host:\t %s\n" "$host"
+printf "CPU:\t %s\n" "$cpu"
+printf "RAM_t:\t %s\n" "$tram"
+printf "RAM_a:\t %s\n" "$aram"
+printf "Screen:\t %s\n" "$res"

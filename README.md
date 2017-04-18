@@ -8,25 +8,26 @@ dotfiles
 git clone --depth 1 https://github.com/manelli/dotfiles ~/dotfiles
 ```
 
-2) Create symlinks
+2) Run the script
 ``` bash
 cd ~/dotfiles
-./makesymlinks.sh
+./dotfiles.sh
 ```
 
 3) Done!
 
 
-## makesymlinks.sh
-The `makesymlinks.sh` script will:
+## dotfiles.sh
+The `dotfiles.sh` script will:
 
-1. Back up any existing dotfiles in `~/` to `~/old_dotfiles/`
+1. Back up any existing dotfiles in `~/` to `~/dotfiles_backup/`
 2. Create symlinks of the dotfiles in `~/dotfiles/` in `~/`
 
 ---
 
 ## Custom binaries
-Custom binaries go in [~/bin](https://github.com/manelli/bin)
+Custom binaries go in `~/.bin`
+Binaries with the `.x` extension will be ignored by git.
 
 ## Custom aliases
 Custom aliases go in `~/.bash_profile`

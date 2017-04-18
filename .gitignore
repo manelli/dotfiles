@@ -2,6 +2,7 @@
 ############
 zshrc
 vim/vim
+bin/*.x
 
 # Compiled source #
 ###################

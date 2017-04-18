@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+command -v apt-get >/dev/null 2>&1 || { echo "Apt-get not installed. Unable to purge old kernels" >&2; exit 1; }
+
+if [[ $EUID -ne 0 ]]; then
+  echo "ERROR: Must be run with root privileges."
+  exit 1
+fi
+
+apt-get purge "$(dpkg -l linux-{image,headers}-"[0-9]*" | awk '/ii/{print $2}' | grep -ve "$(uname -r | sed -r 's/-[a-z]+//')")"
