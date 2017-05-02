@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+eval lynx https://duckduckgo.com/lite?q="'$*'"
