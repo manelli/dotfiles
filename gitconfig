@@ -33,7 +33,5 @@
     rb = rebase
     aa = add -A
     lg = log --graph --pretty=format:'%Cred%h%Creset |%C(blue) %an%Creset |%C(green) %ad %n %C(yellow) %m %s%n'
-
-    # blame/log file ($1) from lines ($2) to ($3)
-    bl = "!f() { git blame -L $2,$3 -- $1; }; f"
-    lf = "!f() { git log -L $2,$3:$1; }; f"
+    lf = log -p -M --follow
+    clean-remote = "!f() { git remote prune "${1:-origin}"; }; f "$@""
