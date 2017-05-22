@@ -6,6 +6,7 @@ fs="
   bin
   gemrc
   gitconfig
+  gitignore
   gitmessage
   inputrc
   irbrc
