@@ -34,4 +34,5 @@
     aa = add -A
     lg = log --graph --pretty=format:'%Cred%h%Creset |%C(blue) %an%Creset |%C(green) %ad %n %C(yellow) %m %s%n'
     lf = log -p -M --follow
+    bl = blame
     clean-remote = "!f() { git remote prune "${1:-origin}"; }; f "$@""
