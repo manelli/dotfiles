@@ -15,6 +15,8 @@ match OverLength /\%80v.\+/
 
 " No automatic insertion of comments
 setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" Do not wrap lines
+setlocal formatoptions-=t
 
 " Shortcuts
 " ---------
