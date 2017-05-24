@@ -27,7 +27,6 @@ The `dotfiles.sh` script will:
 
 ## Custom binaries
 Custom binaries go in `~/.bin`
-Binaries with the `.x` extension will be ignored by git.
 
 ## Custom aliases
 Custom aliases go in `~/.bash_profile`
