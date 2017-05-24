@@ -36,3 +36,4 @@
     lf = log -p -M --follow
     bl = blame
     clean-remote = "!f() { git remote prune "${1:-origin}"; }; f "$@""
+    alias = "!f() { git config --get-regexp alias.*; }; f"
