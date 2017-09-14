@@ -18,6 +18,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 " }}}
 
+" Ignore .gitignore files
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 " FZF as CtrlP {{{
 nnoremap <c-p> :FZF<cr>
 " }}}
