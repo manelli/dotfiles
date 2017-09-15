@@ -3,6 +3,8 @@
 
 # Don't put duplicate lines in the history
 export HISTCONTROL=ignoredups:erasedups
+# Larger history size
+export HISTSIZE=50000
 # Append history entries
 shopt -s histappend
 # After each command, save and reload history
