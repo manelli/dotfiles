@@ -44,6 +44,7 @@ set history=20            " Set history size.
 set laststatus=2          " Always display the status line.
 set mouse=a               " Enable mouse.
 set nowrap                " Disable line breaking.
+set formatoptions-=t
 set number                " Show line numbers.
 set ruler                 " Show the cursor position all the time.
 set showcmd               " Display incomplete commands.
