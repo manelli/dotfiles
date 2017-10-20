@@ -68,7 +68,7 @@ git_branch() {
 }
 
 cs() {
-  cd "$@" && ls -p --color
+  cd "$@" && ls -p
 }
 
 if [ -f ~/.bash_aliases ]; then
