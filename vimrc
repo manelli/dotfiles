@@ -19,9 +19,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 " }}}
 
+" FZF as CtrlP {{{
 " Ignore .gitignore files
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-" FZF as CtrlP {{{
 nnoremap <c-p> :FZF<cr>
 " }}}
 
@@ -105,9 +105,13 @@ set splitright
 " }}}
 
 " Tabs {{{
-nnoremap <leader>t :tabnew<cr>
-nnoremap <leader>n :tabn<cr>
-nnoremap <leader>p :tabp<cr>
+nnoremap <C-W>c :tabnew<cr>
+nnoremap <C-W>n :tabn<cr>
+nnoremap <C-W>p :tabp<cr>
+" }}}
+
+" File Explorer {{{
+nnoremap <C-N> :Lexplore<cr>
 " }}}
 
 " Enables folding for this file
