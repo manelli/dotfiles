@@ -32,7 +32,7 @@ Custom binaries go in `~/.bin`
 Custom aliases go in `~/.bash_profile`
 
 ## Vim Plugs installation
-In vim run the following command: `:PlugInstall`
+In vim run the following command: `:PlugUpdate`
 
 ### Requirements
 - [vim](https://github.com/vim/vim) (with clipboard enabled)

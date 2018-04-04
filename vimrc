@@ -12,7 +12,8 @@ let mapleader=","
 " Vim Plug and Plugins{{{
 call plug#begin()
 
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
