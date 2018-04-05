@@ -20,6 +20,8 @@ call plug#end()
 " }}}
 
 " FZF as CtrlP {{{
+" Ignore .gitignore files
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 nnoremap <c-p> :FZF<cr>
 " }}}
 
