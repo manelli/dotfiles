@@ -20,7 +20,7 @@ setlocal formatoptions-=t
 
 " Shortcuts
 " ---------
-" run current file with ruby
+" run current file with python
 nmap <leader>r :!clear; python %<cr>
 
 " leader + d inserts debugger
