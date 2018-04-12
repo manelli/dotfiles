@@ -111,7 +111,8 @@ nnoremap <C-W>p :tabp<cr>
 " }}}
 
 " File Explorer {{{
-nnoremap <C-N> :Lexplore<cr>
+nnoremap <C-N> :Lexplore<cr> " Open file explorer in a left split
+nnoremap <leader><leader> <C-^> " Switch between last buffer and current buffer
 " }}}
 
 " Enables folding for this file
