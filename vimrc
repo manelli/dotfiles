@@ -92,8 +92,8 @@ set statusline=\ %f\ %m\ %r\ %=%l/\%L\ :\ \%c\ -\ %Y\
 " }}}
 
 " Splits {{{
-nnoremap <C-W>- :sp<cr>
-nnoremap <C-W>\| :vsp<cr>
+nnoremap <C-W>- :new<cr>
+nnoremap <C-W>\| :vnew<cr>
 
 nnoremap <C-W><C-Down> <C-W><C-J>
 nnoremap <C-W><C-Up> <C-W><C-K>
