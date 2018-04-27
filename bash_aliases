@@ -6,6 +6,9 @@ alias work='cd ~/work'
 alias dev='cd ~/dev'
 alias bin='cd ~/.bin'
 
+# wach <your command>
+alias wach='ls | sort | entr '
+
 ## tmux in 256 colors
 alias tmux='tmux -2'
 
