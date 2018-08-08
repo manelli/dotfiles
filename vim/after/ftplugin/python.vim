@@ -25,8 +25,3 @@ nmap <leader>r :!clear; python %<cr>
 
 " leader + d inserts debugger
 nmap <leader>d oimport code; code.interact(local=dict(globals(), **locals()))<Esc>
-
-" comment
-map <leader>c :s/^/# /<CR>
-" uncomment
-map <leader>u :s/^# //e<CR>

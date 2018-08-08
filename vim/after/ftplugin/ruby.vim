@@ -14,8 +14,3 @@ nmap <leader>r :!clear; ruby %<cr>
 
 " leader + d inserts binding.pry
 nmap <leader>d orequire 'pry'; binding.pry<Esc>
-
-" comment
-map <leader>c :s/^/# /<CR>
-" uncomment
-map <leader>u :s/^# //e<CR>

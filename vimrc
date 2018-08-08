@@ -12,17 +12,19 @@ let mapleader=","
 " Vim Plug and Plugins{{{
 call plug#begin()
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'tpope/vim-commentary'
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 " }}}
 
-" FZF as CtrlP {{{
-" Ignore .gitignore files
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-nnoremap <c-p> :FZF<cr>
+" Plug mappings {{{
+let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore .gitignore files
+nnoremap <c-p> :FZF<cr> " FZF as CtrlP
+
+map <leader>c :Commentary<cr>
 " }}}
 
 " Colors {{{
