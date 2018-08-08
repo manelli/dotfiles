@@ -1,9 +1,3 @@
-begin
-  require 'awesome_print'
-  AwesomePrint.pry!
-rescue LoadError
-end
-
 Pry.config.editor = 'vim'
 Pry.config.prompt = [proc { ">> " }, proc { "?>" }]
 

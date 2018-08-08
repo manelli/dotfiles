@@ -38,4 +38,4 @@
     clean-remote = "!f() { git remote prune "${1:-origin}"; }; f "$@""
     alias = "!f() { git config --get-regexp alias.*; }; f"
 [push]
-	default = simple
+    default = simple

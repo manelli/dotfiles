@@ -36,6 +36,5 @@ In vim run the following command: `:PlugUpdate`
 
 ### Requirements
 - [vim](https://github.com/vim/vim) (with clipboard enabled)
-- [vim-plug](https://github.com/junegunn/vim-plug) (vendored in `vim/autoload/plug.vim`)
 - [fzf](https://github.com/junegunn/fzf)
 - [tmux](https://github.com/tmux/tmux)
