@@ -71,7 +71,7 @@ set nowritebackup
 set noswapfile
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·
+set list listchars=tab:»\ ,trail:·,nbsp:␣
 
 " Disable Ex mode
 map Q <Nop>
