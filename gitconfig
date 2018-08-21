@@ -24,7 +24,7 @@
 [url "git@gitlab.com:"]
     insteadOf = "gl:"
 [alias]
-    st = status -s
+    st = status -su
     ci = commit
     co = checkout
     br = branch
