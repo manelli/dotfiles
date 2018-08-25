@@ -1,8 +1,11 @@
 set nocompatible " SET FIRST
-set re=1
+set re=1 " Use the old vim regex engine
 
 " Requirements {{{
-" vim with clipboard enabled
+" Vim >= 8.1
+" +clipboard
+" +mouse_sgr
+" +terminal
 " }}}
 
 " Leader {{{
@@ -69,6 +72,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Better mouse support
+set ttymouse=sgr
 
 " Display extra whitespace
 set list listchars=tab:»\ ,trail:·,nbsp:␣

@@ -35,6 +35,6 @@ Custom aliases go in `~/.bash_profile`
 In vim run the following command: `:PlugUpdate`
 
 ### Requirements
-- [vim](https://github.com/vim/vim) (with clipboard enabled)
+- [vim](https://github.com/vim/vim) (See requirements in `vimrc`)
 - [fzf](https://github.com/junegunn/fzf)
 - [tmux](https://github.com/tmux/tmux)
