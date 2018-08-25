@@ -17,6 +17,7 @@ call plug#begin()
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary'
+Plug 'jpalardy/vim-slime'
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
@@ -28,6 +29,15 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore .gitignore files
 nnoremap <c-p> :FZF<cr> " FZF as CtrlP
 
 map <leader>c :Commentary<cr>
+
+" vim-slime
+if has('nvim')
+  let g:slime_target = "neovim"
+else
+  let g:slime_target = 'vimterminal'
+endif
+xmap <leader>s <Plug>SlimeRegionSend
+nmap <leader>s <Plug>SlimeParagraphSend
 " }}}
 
 " Colors {{{
