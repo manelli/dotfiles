@@ -120,6 +120,22 @@ nnoremap <C-W><C-Left> <C-W><C-H>
 
 set splitbelow
 set splitright
+
+function! ToggleSplits()
+  if !exists('t:splitType')
+    let t:splitType = 'vertical'
+  endif
+
+  if t:splitType == 'vertical'
+    windo ball
+    let t:splitType = 'horizontal'
+  else
+    windo vertical ball
+    let t:splitType = 'vertical'
+  endif
+endfunction
+
+nnoremap <silent> <C-W><space> :call ToggleSplits()<cr>
 " }}}
 
 " Tabs {{{
