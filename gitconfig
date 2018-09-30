@@ -39,3 +39,5 @@
     alias = "!f() { git config --get-regexp alias.*; }; f"
 [push]
     default = simple
+[fetch]
+    prune = true
