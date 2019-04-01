@@ -10,7 +10,6 @@ fs="
   gitmessage
   inputrc
   irbrc
-  pryrc
   tmux.conf
   vim
   vimrc"
