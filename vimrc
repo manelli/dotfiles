@@ -2,10 +2,7 @@ set nocompatible " SET FIRST
 set re=1 " Use the old vim regex engine
 
 " Requirements {{{
-" Vim >= 8.1
-" +clipboard
-" +mouse_sgr
-" +terminal
+" Vim >= 8.1 (+clipboard +terminal)
 " }}}
 
 " Leader {{{
@@ -25,17 +22,21 @@ call plug#end()
 " }}}
 
 " Plug mappings {{{
-let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore .gitignore files
-nnoremap <c-p> :FZF<cr> " FZF as CtrlP
+" Ignore .gitignore files
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
+" FZF as CtrlP
+nnoremap <c-p> :FZF<cr>
+
+" Comment/uncomment
 map <leader>c :Commentary<cr>
 
+" Open a terminal pane
+map <leader>t :terminal<cr>
+
 " vim-slime
-if has('nvim')
-  let g:slime_target = "neovim"
-else
-  let g:slime_target = 'vimterminal'
-endif
+let g:slime_target = 'vimterminal'
+
 xmap <leader>s <Plug>SlimeRegionSend
 nmap <leader>s <Plug>SlimeParagraphSend
 " }}}
@@ -84,7 +85,9 @@ set nowritebackup
 set noswapfile
 
 " Better mouse support
-set ttymouse=sgr
+if has('mouse_sgr')
+  set ttymouse=sgr
+end
 
 " Display extra whitespace
 set list listchars=tab:»\ ,trail:·,nbsp:␣
