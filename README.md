@@ -37,3 +37,4 @@ In vim run the following command: `:PlugUpdate`
 ### Requirements
 - [vim](https://github.com/vim/vim) (See requirements in `vimrc`)
 - [tmux](https://github.com/tmux/tmux)
+- [ag](https://github.com/ggreer/the_silver_searcher)
