@@ -21,6 +21,9 @@ bindsym $mod+Return exec urxvt -e bash -c 'tmux -2'
 # start web browser
 bindsym $mod+b exec chromium-browser
 
+# lock screen
+bindsym $mod+l exec i3lock -c 000000
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -118,5 +121,5 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3status -c ~/.i3/status
 }
