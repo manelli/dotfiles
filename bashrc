@@ -66,13 +66,11 @@ cs() {
   cd "$@" && ls -p
 }
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # Disable Ctrl-S locking
 stty ixany
 stty ixoff -ixon
+
+[ -f ~/.bash_aliases ] && source ~/.bash_aliases
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 

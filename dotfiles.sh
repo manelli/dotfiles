@@ -14,20 +14,20 @@ fs="
   vim
   vimrc"
 
-cd ~/dotfiles || exit 1
+cd ~ || exit 1
 
 mkdir -p ~/dotfiles_backup
 
-printf "Creating symbolic links:\n\n"
-for f in $fs; do
-  # Backup
-  if [ -f ~/."$f" ]; then
-    mv ~/."$f" ~/dotfiles_backup/
-  fi
+printf "%-20s backup copied\n" "dotfile"
+echo "----------------------------------"
 
-  # Symlink
-  ln -s ~/dotfiles/"$f" ~/."$f"
-  printf "%-12s OK\n" "$f"
+for f in $fs; do
+  [ -d ~/."$f" ] && mv ~/."$f" ~/dotfiles_backup/
+  [ -f ~/."$f" ] && mv ~/."$f" ~/dotfiles_backup/
+  printf "%-20s      ✓" "$f"
+
+  cp -a ~/dotfiles/"$f" ~/."$f"
+  printf "      ✓\n"
 done
 
 printf "\nDone!\n"

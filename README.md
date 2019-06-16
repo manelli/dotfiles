@@ -21,7 +21,7 @@ cd ~/dotfiles
 The `dotfiles.sh` script will:
 
 1. Back up any existing dotfiles in `~/` to `~/dotfiles_backup/`
-2. Create symlinks of the dotfiles in `~/dotfiles/` in `~/`
+2. Copy the dotfiles in `~/dotfiles/` to `~/`
 
 ---
 
