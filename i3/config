@@ -15,6 +15,9 @@ new_window 1pixel
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# NetworkManager applet at startup
+exec --no-startup-id nm-applet
+
 # start a terminal
 bindsym $mod+Return exec urxvt -e bash -c 'tmux -2'
 
