@@ -10,7 +10,7 @@ if [[ $platform == 'Linux' ]]; then
   host=$(uname -n)
   ram=$(awk '/MemTotal/ {print $2}' /proc/meminfo | awk '{$1=$1/(1024^2); print $1,"GB";}')
   cpu=$(awk -F':' '/model name/{ print $2 }' /proc/cpuinfo | head -n 1 | tr -s " " | sed 's/^ //')
-  res=$(xrandr | grep '.*.' | gawk '{printf "%s ", $1}')
+  res=$(xrandr | grep '.*.' | awk '{printf "%s ", $1}')
 elif [[ $platform == 'Darwin' ]]; then
   os="$(sw_vers -productName) $(sw_vers -productVersion) $(sw_vers -buildVersion)"
   kernel=$(uname -sr)
