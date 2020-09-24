@@ -13,11 +13,12 @@ let mapleader=","
 call plug#begin()
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
+
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
-Plug 'dense-analysis/ale'
 
 call plug#end()
 " }}}
