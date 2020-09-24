@@ -7,3 +7,6 @@ setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " ---------
 " leader + d inserts IEx.pry
 nmap <leader>d orequire IEx; IEx.pry<Esc>
+
+" Run mix format on save
+autocmd BufWritePost * silent :!mix format %
