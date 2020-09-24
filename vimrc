@@ -14,9 +14,10 @@ call plug#begin()
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary'
-Plug 'jpalardy/vim-slime'
+Plug 'tpope/vim-endwise'
+Plug 'jiangmiao/auto-pairs'
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'dense-analysis/ale'
 
 call plug#end()
 " }}}
@@ -30,15 +31,6 @@ nnoremap <c-p> :FZF<cr>
 
 " Comment/uncomment
 map <leader>c :Commentary<cr>
-
-" Open a terminal pane
-map <leader>t :terminal<cr>
-
-" vim-slime
-let g:slime_target = 'vimterminal'
-
-xmap <leader>s <Plug>SlimeRegionSend
-nmap <leader>s <Plug>SlimeParagraphSend
 " }}}
 
 " Colors {{{
@@ -150,6 +142,10 @@ nnoremap <C-W>p :tabp<cr>
 " File Explorer {{{
 nnoremap <C-N> :Lexplore<cr> " Open file explorer in a left split
 nnoremap <leader><leader> <C-^> " Switch between last buffer and current buffer
+" }}}
+"
+" Terminal {{{
+map <leader>t :terminal<cr>
 " }}}
 
 " Enables folding for this file
