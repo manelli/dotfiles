@@ -24,7 +24,7 @@ call plug#end()
 " }}}
 
 " Plug mappings {{{
-let $FZF_DEFAULT_COMMAND = 'rg --files'
+let $FZF_DEFAULT_COMMAND = 'rg --files --vimgrep'
 
 " FZF as CtrlP
 nnoremap <c-p> :FZF<cr>
