@@ -24,8 +24,7 @@ call plug#end()
 " }}}
 
 " Plug mappings {{{
-" Ignore .gitignore files
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --files'
 
 " FZF as CtrlP
 nnoremap <c-p> :FZF<cr>
