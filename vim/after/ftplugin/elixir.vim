@@ -11,6 +11,9 @@ nmap <leader>d orequire IEx; IEx.pry<Esc>
 " :Format
 command! -nargs=0 -complete=file Format execute ':w|:!clear; mix format %'
 
+" :Test
+command! -nargs=1 -complete=file Test execute ':!clear; mix test %'
+
 " :XrefGraph sink|source
 command! -nargs=1 -complete=file XrefGraph execute ':!clear; mix xref graph --<args> %'
 
