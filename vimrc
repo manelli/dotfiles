@@ -17,13 +17,15 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
+Plug 'vim-test/vim-test'
 
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 
 call plug#end()
 " }}}
 
-" Plug mappings {{{
+" Plugins configuration {{{
+" FZF default command
 let $FZF_DEFAULT_COMMAND = 'rg --files --vimgrep'
 
 " FZF as CtrlP
@@ -31,6 +33,9 @@ nnoremap <c-p> :FZF<cr>
 
 " Comment/uncomment
 map <leader>c :Commentary<cr>
+
+" Vim-test strategy
+let test#strategy = "vimterminal"
 " }}}
 
 " Colors {{{
