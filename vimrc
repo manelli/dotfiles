@@ -18,6 +18,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-test/vim-test'
+Plug 'lervag/file-line'
 
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 
