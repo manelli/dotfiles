@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 fs="
+  alacritty.yml
   Xdefaults
   bash_aliases
   bashrc
