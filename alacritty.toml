@@ -1,6 +1,6 @@
 [shell]
-args = ["-l", "-c", "tmux attach || tmux"]
-program = "/bin/bash"
+program = "/opt/homebrew/bin/tmux"
+args = ["new-session", "-A", "-s", "main"]
 
 [window]
 startup_mode = "Fullscreen"
