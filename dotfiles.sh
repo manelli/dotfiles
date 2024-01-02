@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
 
 fs="
-  alacritty.yml
-  Xdefaults
+  alacritty.toml
   bash_aliases
   bashrc
   bin
-  gemrc
   gitconfig
   gitignore
   gitmessage
-  i3
   inputrc
-  irbrc
   tmux.conf
   vim
   vimrc
@@ -36,3 +32,5 @@ for f in $fs; do
 done
 
 printf "\nDone!\n"
+
+printf "Run: echo \"[ -f ~/.bashrc  ] && source ~/.bashrc\" >> .bash_profile\n"
