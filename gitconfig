@@ -23,6 +23,7 @@
     co = checkout
     br = branch
     df = diff
+    dff = diff --color-words=.
     fc = fetch
     rb = rebase
     aa = add -A
