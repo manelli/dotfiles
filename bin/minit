@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# Minimal git-init
-
-mkdir .git
-mkdir .git/refs
-mkdir .git/objects
-echo 'ref: refs/heads/main' > .git/HEAD
