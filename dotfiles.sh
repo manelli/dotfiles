@@ -2,16 +2,19 @@
 
 fs="
   alacritty.toml
-  bash_aliases
+  aliases
   bashrc
   bin
+  customrc
   gitconfig
   gitignore
   gitmessage
   inputrc
+  profile
   tmux.conf
   vim
   vimrc
+  zshrc
 "
 
 cd ~ || exit 1
@@ -32,5 +35,3 @@ for f in $fs; do
 done
 
 printf "\nDone!\n"
-
-printf "Run: echo \"[ -f ~/.bashrc  ] && source ~/.bashrc\" >> .bash_profile\n"

@@ -9,9 +9,6 @@ alias bin='cd ~/.bin'
 # wach <your command>
 alias wach='ls | sort | entr '
 
-## tmux in 256 colors
-alias tmux='tmux -2'
-
 platform=$(uname);
 if [[ $platform == 'Linux' ]]; then
   alias ls='ls -p --color'
@@ -33,4 +30,4 @@ alias vi='vim'
 
 # reload configs
 alias reload_tmux='tmux source-file ~/.tmux.conf'
-alias reload_bash='source ~/.bashrc'
+alias reload_bash='source ~/.profile'

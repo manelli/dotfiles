@@ -1,6 +1,12 @@
-[shell]
-program = "/bin/bash"
-args = ["--login", "-c", "tmux attach || tmux"]
+[terminal.shell]
+# program = "/usr/local/bin/tmux"
+program = "/opt/homebrew/bin/tmux"
+args = [
+  "new-session",
+  "-A",     # attach if session already exists
+  "-D",     # detach other clients
+  "-s", "main"
+]
 
 [window]
 startup_mode = "Fullscreen"
