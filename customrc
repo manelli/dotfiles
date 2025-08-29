@@ -1,6 +1,8 @@
 # Custom aliases and configuration goes here
 # E.g:
-# export BASH_SILENCE_DEPRECATION_WARNING=1
-# export ERL_AFLAGS="-kernel shell_history enabled"
-# eval "$(/opt/homebrew/bin/brew shellenv)"
-# export PATH="$PATH:$HOME/.asdf/bin"
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export ERL_AFLAGS="-kernel shell_history enabled"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH=~/.asdf/shims:$PATH
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
