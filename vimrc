@@ -19,6 +19,7 @@ Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-test/vim-test'
 Plug 'lervag/file-line'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 
@@ -44,6 +45,9 @@ set t_Co=256              " 256-color mode
 syntax enable             " Syntax highlighting
 set background=dark       " Background
 colorscheme grb256        " Colorscheme
+
+" Override SignColumn highlight (must come AFTER colorscheme)
+highlight SignColumn ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 " }}}
 
 " Misc {{{
@@ -81,6 +85,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set nobackup
 set nowritebackup
 set noswapfile
+
+set updatetime=100
 
 " Better mouse support
 if has('mouse_sgr')
