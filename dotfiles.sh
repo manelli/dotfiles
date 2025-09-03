@@ -5,7 +5,6 @@ fs="
   aliases
   bashrc
   bin
-  customrc
   gitconfig
   gitignore
   gitmessage
@@ -17,21 +16,37 @@ fs="
   zshrc
 "
 
+copy_fs="
+  customrc
+"
+
 cd ~ || exit 1
 
 mkdir -p ~/dotfiles_backup
 
-printf "%-20s backup linked\n" "dotfile"
-echo "----------------------------------"
+printf "\n🔧 Installing dotfiles...\n\n"
+printf "%-20s %s %s\n" "File" "Backup" "Link"
+printf "────────────────────────────────\n"
 
 for f in $fs; do
   [ -h ~/."$f" ] && unlink ~/."$f"
   [ -d ~/."$f" ] && mv ~/."$f" ~/dotfiles_backup/
   [ -f ~/."$f" ] && mv ~/."$f" ~/dotfiles_backup/
-  printf "%-20s      ✓" "$f"
+  printf "%-20s   ✓" "$f"
 
   ln -s ~/dotfiles/"$f" ~/."$f"
-  printf "      ✓\n"
+  printf "     ✓\n"
 done
 
-printf "\nDone!\n"
+for f in $copy_fs; do
+  [ -h ~/."$f" ] && unlink ~/."$f"
+  [ -d ~/."$f" ] && mv ~/."$f" ~/dotfiles_backup/
+  [ -f ~/."$f" ] && mv ~/."$f" ~/dotfiles_backup/
+  printf "%-20s   ✓" "$f"
+
+  cp ~/dotfiles/"$f" ~/."$f"
+  printf "     ✓\n"
+done
+
+printf "\n✅ Dotfiles installation complete!\n"
+printf "\n💡 Note: Review and customize ~/.customrc as needed\n"
