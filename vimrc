@@ -13,14 +13,12 @@ let mapleader=","
 call plug#begin()
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-test/vim-test'
 Plug 'lervag/file-line'
 Plug 'airblade/vim-gitgutter'
-
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 
 call plug#end()
@@ -155,8 +153,8 @@ nnoremap <C-W>p :tabp<cr>
 nnoremap <C-N> :Lexplore<cr> " Open file explorer in a left split
 nnoremap <leader><leader> <C-^> " Switch between last buffer and current buffer
 " }}}
-"
-" Terminal {{{
+
+""" Terminal {{{
 map <leader>t :terminal<cr>
 " }}}
 

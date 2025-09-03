@@ -39,13 +39,16 @@ for f in $fs; do
 done
 
 for f in $copy_fs; do
-  [ -h ~/."$f" ] && unlink ~/."$f"
-  [ -d ~/."$f" ] && mv ~/."$f" ~/dotfiles_backup/
-  [ -f ~/."$f" ] && mv ~/."$f" ~/dotfiles_backup/
-  printf "%-20s   ✓" "$f"
+  if [ -f ~/."$f" ]; then
+    printf "%-20s   - (exists)\n" "$f"
+  else
+    [ -h ~/."$f" ] && unlink ~/."$f"
+    [ -d ~/."$f" ] && mv ~/."$f" ~/dotfiles_backup/
+    printf "%-20s   ✓" "$f"
 
-  cp ~/dotfiles/"$f" ~/."$f"
-  printf "     ✓\n"
+    cp ~/dotfiles/"$f" ~/."$f"
+    printf "     ✓\n"
+  fi
 done
 
 printf "\n✅ Dotfiles installation complete!\n"
