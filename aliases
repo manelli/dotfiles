@@ -6,19 +6,9 @@ alias work='cd ~/work'
 alias dev='cd ~/dev'
 alias bin='cd ~/.bin'
 
-# wach <your command>
-alias wach='ls | sort | entr '
-
-platform=$(uname);
-if [[ $platform == 'Linux' ]]; then
-  alias ls='ls -p --color'
-  alias rm='rm -I'
-  alias rmf='rm -rfI'
-elif [[ $platform == 'Darwin' ]]; then
-  alias ls='ls -p -G'
-  alias rm='rm -i'
-  alias rmf='rm -rfi'
-fi
+alias ll='ls -lh'
+alias rm='rm -I'
+alias rmf='rm -rfI'
 
 ## je
 alias :q='exit'
@@ -30,4 +20,4 @@ alias vi='vim'
 
 # reload configs
 alias reload_tmux='tmux source-file ~/.tmux.conf'
-alias reload_bash='source ~/.profile'
+alias reload_shell='source ~/.profile'
