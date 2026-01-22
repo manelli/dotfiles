@@ -100,3 +100,4 @@ tags
 *.msi
 *.msm
 *.msp
+.claude/settings.local.json
